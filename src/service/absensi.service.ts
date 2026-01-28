@@ -153,6 +153,62 @@ export class AbsensiService {
   };
 }
 
+async rekapMingguanPerSantri(
+  userId: number,
+  minggu: string, // contoh: "2026-01-15"
+) {
+  const baseDate = new Date(minggu);
+
+  if (isNaN(baseDate.getTime())) {
+    throw new Error("Format minggu harus YYYY-MM-DD");
+  }
+
+  // hitung awal & akhir minggu (Senin - Minggu)
+  const day = baseDate.getDay(); // 0 = Minggu
+  const diffToMonday = day === 0 ? -6 : 1 - day;
+
+  const start = new Date(baseDate);
+  start.setDate(baseDate.getDate() + diffToMonday);
+  start.setHours(0, 0, 0, 0);
+
+  const end = new Date(start);
+  end.setDate(start.getDate() + 6);
+  end.setHours(23, 59, 59, 999);
+
+  // ambil data
+  const absensi =
+    await this.absensiRepo.getAbsensiByUserAndWeek(
+      userId,
+      start,
+      end
+    );
+
+  let hadir = 0;
+  let izin = 0;
+  let alpha = 0;
+
+  absensi.forEach((a) => {
+    if (a.status === StatusAbsensi.hadir) hadir++;
+    if (a.status === StatusAbsensi.izin) izin++;
+    if (a.status === StatusAbsensi.alpha) alpha++;
+  });
+
+  const total = absensi.length;
+  const persentaseHadir =
+    total === 0 ? 0 : Math.round((hadir / total) * 100);
+
+  return {
+    userId,
+    minggu: `${start.toISOString().slice(0,10)} s/d ${end.toISOString().slice(0,10)}`,
+    hadir,
+    izin,
+    alpha,
+    total,
+    persentaseHadir,
+  };
+}
+
+
   // ===============================
   // UPDATE & DELETE
   // ===============================

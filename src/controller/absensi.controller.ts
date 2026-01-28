@@ -176,6 +176,30 @@ absen = async (req: Request, res: Response) => {
     });
   }
 };
+rekapMingguanPerSantri = async (req: Request, res: Response) => {
+  try {
+    const userId = Number(req.params.userId);
+    const { minggu } = req.query;
 
+    if (!minggu) {
+      throw new Error("Query minggu wajib (YYYY-MM-DD)");
+    }
+
+    const data =
+      await this.service.rekapMingguanPerSantri(
+        userId,
+        String(minggu)
+      );
+
+    res.json({
+      message: "Rekap mingguan santri berhasil",
+      data,
+    });
+  } catch (err: any) {
+    res.status(400).json({
+      message: err.message,
+    });
+  }
+};
 
 }

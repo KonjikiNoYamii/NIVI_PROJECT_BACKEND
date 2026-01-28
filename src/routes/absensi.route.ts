@@ -12,6 +12,7 @@ import { UserService } from "../service/user.service";
 import { AbsensiAIService } from "../service/absensiAI.service";
 import { AIService } from "../ai/ai.service";
 import { AIAssistantService } from "../service/ai.assistant.service";
+import { roleMiddleware } from "../middlewares/role.middleware";
 
 
 const router = Router();
@@ -41,6 +42,12 @@ router.get("/",absensiController.getAll); // semua absensi
 router.get(
   "/rekap/santri/:userId",
   absensiController.rekapBulananPerSantri
+);
+router.get(
+  "/rekap/mingguan/:userId",
+  authenticate,
+  roleMiddleware(["admin", "pengajar"]),
+  absensiController.rekapMingguanPerSantri
 );
 
 router.get("/:id", authenticate,absensiController.getByUserId); // lihat absensi per user
