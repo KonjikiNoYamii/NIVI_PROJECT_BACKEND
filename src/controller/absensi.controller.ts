@@ -149,4 +149,33 @@ absen = async (req: Request, res: Response) => {
       });
     }
   };
+  rekapBulananPerSantri = async (req: Request, res: Response) => {
+  try {
+    const userId = Number(req.params.userId);
+    const { bulan } = req.query;
+
+    if (!bulan) {
+      throw new Error("Query bulan wajib (YYYY-MM)");
+    }
+
+    const data =
+      await this.service.rekapBulananPerSantri(
+        userId,
+        String(bulan)
+      );
+
+    res.json({
+      success: true,
+      message: "Rekap bulanan santri berhasil",
+      data,
+    });
+  } catch (err: any) {
+    res.status(400).json({
+      success: false,
+      message: err.message,
+    });
+  }
+};
+
+
 }

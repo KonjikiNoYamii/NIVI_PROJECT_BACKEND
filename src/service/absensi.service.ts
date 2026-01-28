@@ -102,6 +102,57 @@ export class AbsensiService {
     return this.absensiRepo.getAll();
   }
 
+  async rekapBulananPerSantri(
+  userId: number,
+  bulan: string,
+) {
+  // "2026-01" → [2026, 1]
+  const [year, month] = bulan.split("-").map(Number);
+
+  // validasi format
+  if (!year || !month) {
+    throw new Error("Format bulan harus YYYY-MM");
+  }
+
+  // range tanggal
+  const start = new Date(year, month - 1, 1);
+  const end = new Date(year, month, 0, 23, 59, 59);
+
+  // ambil data mentah
+  const absensi =
+    await this.absensiRepo.getAbsensiByUserAndMonth(
+      userId,
+      start,
+      end
+    );
+
+  // hitung status
+  let hadir = 0;
+  let izin = 0;
+  let alpha = 0;
+
+  absensi.forEach((a) => {
+    if (a.status === StatusAbsensi.hadir) hadir++;
+    if (a.status === StatusAbsensi.izin) izin++;
+    if (a.status === StatusAbsensi.alpha) alpha++;
+  });
+
+  const total = absensi.length
+
+  const persentaseHadir =
+    total === 0 ? 0 : Math.round((hadir / total) * 100);
+
+  return {
+    userId,
+    bulan,
+    hadir,
+    izin,
+    alpha,
+    total,
+    persentaseHadir,
+  };
+}
+
   // ===============================
   // UPDATE & DELETE
   // ===============================

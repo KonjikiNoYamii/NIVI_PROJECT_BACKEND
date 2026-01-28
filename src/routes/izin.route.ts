@@ -15,6 +15,7 @@ import { IzinController } from "../controller/izin.controller";
 import { authenticate } from "../middlewares/auth.middleware";
 import { roleMiddleware } from "../middlewares/role.middleware";
 
+
 const router = Router();
 
 /* =======================
@@ -35,7 +36,7 @@ const jadwalAbsensiService = new JadwalAbsensiService(jadwalRepo);
 const absensiService = new AbsensiService(
   absensiRepo,
   settingService,
-  jadwalRepo
+  jadwalRepo,
 );
 const izinService = new IzinService(
   izinRepo,

@@ -234,8 +234,34 @@ export class AbsensiRepository {
       data,
     });
   }
-
-  
-
-
+getAbsensiByUserAndMonth(
+  userId: number,
+  start: Date,
+  end: Date
+) {
+  return this.prisma.absensi.findMany({
+    where: {
+      userId,
+      tanggal: {
+        gte: start,
+        lte: end,
+      },
+    },
+  });
+}
+getAbsensiByUserAndWeek (
+  userId: number,
+  start: Date,
+  end: Date
+){
+  return this.prisma.absensi.findMany({
+    where: {
+      userId,
+      tanggal: {
+        gte: start,
+        lte: end,
+      },
+    },
+  });
+}
 }

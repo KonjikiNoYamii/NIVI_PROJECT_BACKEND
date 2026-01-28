@@ -38,6 +38,11 @@ router.get("/me/today",authenticate, absensiController.getMyTodayAbsensi);
 
 // 🔹 ADMIN CRUD (opsional, kalau admin ingin mengelola absensi manual)
 router.get("/",absensiController.getAll); // semua absensi
+router.get(
+  "/rekap/santri/:userId",
+  absensiController.rekapBulananPerSantri
+);
+
 router.get("/:id", authenticate,absensiController.getByUserId); // lihat absensi per user
 router.put("/:id", authenticate,absensiController.update); // update status
 router.delete("/:id",authenticate, absensiController.delete); // hapus absensi
