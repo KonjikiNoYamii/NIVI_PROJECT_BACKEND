@@ -1,6 +1,6 @@
-import { Hari, JadwalAbsensi } from "../../dist/generated/index.js";
-import { AbsensiSettingRepository } from "../repository/absensiSetting.repository.js";
-import { JadwalAbsensiRepository } from "../repository/jadwalAbsensi.repository.js";
+import { Hari, JadwalAbsensi } from "../../dist/generated";
+import { AbsensiSettingRepository } from "../repository/absensiSetting.repository";
+import { JadwalAbsensiRepository } from "../repository/jadwalAbsensi.repository";
 export declare class JadwalAbsensiService {
     private repo;
     private settingRepo;
@@ -16,11 +16,11 @@ export declare class JadwalAbsensiService {
         kelasId: number;
         tanggal: Date;
         createdAt: Date;
-        hari: import("../../dist/generated/index.js").$Enums.Hari;
+        hari: import("../../dist/generated").$Enums.Hari;
         jamMulai: string;
         jamSelesai: string;
     }>;
-    createBulkJadwal: (kelasId: number, jamMulai: string, jamSelesai: string, tanggalMulai: Date, tanggalSelesai: Date) => Promise<import("../../dist/generated/index.js").Prisma.BatchPayload>;
+    createBulkJadwal: (kelasId: number, jamMulai: string, jamSelesai: string, tanggalMulai: Date, tanggalSelesai: Date) => Promise<import("../../dist/generated").Prisma.BatchPayload>;
     getAllByKelas: (kelasId: number, month?: number, year?: number) => Promise<JadwalAbsensi[]>;
     getById: (id: number) => Promise<JadwalAbsensi | null>;
     updateJadwal(id: number, data: Partial<JadwalAbsensi>): Promise<JadwalAbsensi>;
@@ -29,7 +29,7 @@ export declare class JadwalAbsensiService {
         kelasId: number;
         tanggal: Date;
         createdAt: Date;
-        hari: import("../../dist/generated/index.js").$Enums.Hari;
+        hari: import("../../dist/generated").$Enums.Hari;
         jamMulai: string;
         jamSelesai: string;
     }>;

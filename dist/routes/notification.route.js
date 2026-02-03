@@ -1,9 +1,9 @@
 import { Router } from "express";
-import prismaInstance from "../database.js";
-import { NotificationRepository } from "../repository/notification.repository.js";
-import { NotificationService } from "../service/notification.service.js";
-import { NotificationController } from "../controller/notification.controller.js";
-import { authenticate } from "../middlewares/auth.middleware.js";
+import prismaInstance from "../database";
+import { NotificationRepository } from "../repository/notification.repository";
+import { NotificationService } from "../service/notification.service";
+import { NotificationController } from "../controller/notification.controller";
+import { authenticate } from "../middlewares/auth.middleware";
 const router = Router();
 // INIT
 const repo = new NotificationRepository(prismaInstance);

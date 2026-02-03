@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { JadwalAbsensiService } from "../service/jadwalAbsensi.service.js";
+import { JadwalAbsensiService } from "../service/jadwalAbsensi.service";
 export declare class JadwalAbsensiController {
     private service;
     constructor(service: JadwalAbsensiService);

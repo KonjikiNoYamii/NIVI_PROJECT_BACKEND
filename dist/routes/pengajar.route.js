@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { PengajarRepository } from "../repository/pengajar.repository.js";
-import prismaInstance from "../database.js";
-import { PengajarService } from "../service/pengajar.service.js";
-import { PengajarController } from "../controller/pengajar.controller.js";
+import { PengajarRepository } from "../repository/pengajar.repository";
+import prismaInstance from "../database";
+import { PengajarService } from "../service/pengajar.service";
+import { PengajarController } from "../controller/pengajar.controller";
 const router = Router();
 const repo = new PengajarRepository(prismaInstance);
 const service = new PengajarService(repo);

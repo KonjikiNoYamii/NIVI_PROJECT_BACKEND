@@ -1,4 +1,4 @@
-import { PrismaClient, User } from "../../dist/generated/index.js";
+import { PrismaClient, User } from "../../dist/generated";
 export declare class AdminRepository {
     private prisma;
     constructor(prisma: PrismaClient);
@@ -23,20 +23,20 @@ export declare class AdminRepository {
         isActive: boolean;
         otp: string | null;
         otpExpiresAt: Date | null;
-        role: import("../../dist/generated/index.js").$Enums.Role;
+        role: import("../../dist/generated").$Enums.Role;
         deletedAt: Date | null;
     }>;
-    assignPengajar(kelasId: number, pengajarId: number): import("../../dist/generated/index.js").Prisma.Prisma__KelasClient<{
+    assignPengajar(kelasId: number, pengajarId: number): import("../../dist/generated").Prisma.Prisma__KelasClient<{
         id: number;
         namaKelas: string;
         deskripsi: string | null;
-    }, never, import("../../dist/generated/runtime/client.js").DefaultArgs, import("../../dist/generated/index.js").Prisma.PrismaClientOptions>;
-    removePengajar(kelasId: number, pengajarId: number): import("../../dist/generated/index.js").Prisma.Prisma__KelasClient<{
+    }, never, import("../../dist/generated/runtime/client").DefaultArgs, import("../../dist/generated").Prisma.PrismaClientOptions>;
+    removePengajar(kelasId: number, pengajarId: number): import("../../dist/generated").Prisma.Prisma__KelasClient<{
         id: number;
         namaKelas: string;
         deskripsi: string | null;
-    }, never, import("../../dist/generated/runtime/client.js").DefaultArgs, import("../../dist/generated/index.js").Prisma.PrismaClientOptions>;
-    getPengajarByKelas(kelasId: number): import("../../dist/generated/index.js").Prisma.Prisma__KelasClient<{
+    }, never, import("../../dist/generated/runtime/client").DefaultArgs, import("../../dist/generated").Prisma.PrismaClientOptions>;
+    getPengajarByKelas(kelasId: number): import("../../dist/generated").Prisma.Prisma__KelasClient<{
         id: number;
         pengajar: {
             name: string | null;
@@ -48,7 +48,7 @@ export declare class AdminRepository {
             } | null;
         }[];
         namaKelas: string;
-    } | null, null, import("../../dist/generated/runtime/client.js").DefaultArgs, import("../../dist/generated/index.js").Prisma.PrismaClientOptions>;
+    } | null, null, import("../../dist/generated/runtime/client").DefaultArgs, import("../../dist/generated").Prisma.PrismaClientOptions>;
     createAdmin: (data: {
         name: string;
         email: string;
@@ -71,7 +71,7 @@ export declare class AdminRepository {
         isActive: boolean;
         otp: string | null;
         otpExpiresAt: Date | null;
-        role: import("../../dist/generated/index.js").$Enums.Role;
+        role: import("../../dist/generated").$Enums.Role;
         deletedAt: Date | null;
     }>;
     deleteAdmin: (id: number) => Promise<{
@@ -85,7 +85,7 @@ export declare class AdminRepository {
         isActive: boolean;
         otp: string | null;
         otpExpiresAt: Date | null;
-        role: import("../../dist/generated/index.js").$Enums.Role;
+        role: import("../../dist/generated").$Enums.Role;
         deletedAt: Date | null;
     }>;
 }

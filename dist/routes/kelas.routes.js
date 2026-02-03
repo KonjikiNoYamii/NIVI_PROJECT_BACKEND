@@ -1,9 +1,9 @@
 import { Router } from "express";
-import { KelasRepository } from "../repository/kelas.repository.js";
-import prismaInstance from "../database.js";
-import { KelasService } from "../service/kelas.service.js";
-import { KelasController } from "../controller/kelas.controller.js";
-import { authenticate } from "../middlewares/auth.middleware.js";
+import { KelasRepository } from "../repository/kelas.repository";
+import prismaInstance from "../database";
+import { KelasService } from "../service/kelas.service";
+import { KelasController } from "../controller/kelas.controller";
+import { authenticate } from "../middlewares/auth.middleware";
 const router = Router();
 // INIT LAYER
 const kelasRepo = new KelasRepository(prismaInstance);

@@ -1,8 +1,8 @@
 import { Router } from "express";
-import prismaInstance from "../database.js";
-import { LogAktivitasRepository } from "../repository/logAktivitas.repository.js";
-import { LogAktivitasService } from "../service/logaktivitas.service.js";
-import { LogAktivitasController } from "../controller/logAktivitas.controller.js";
+import prismaInstance from "../database";
+import { LogAktivitasRepository } from "../repository/logAktivitas.repository";
+import { LogAktivitasService } from "../service/logaktivitas.service";
+import { LogAktivitasController } from "../controller/logAktivitas.controller";
 const router = Router();
 // DEPENDENCY INJECTION 
 const logRepo = new LogAktivitasRepository(prismaInstance);

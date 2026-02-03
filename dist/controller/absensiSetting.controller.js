@@ -1,4 +1,4 @@
-import { successResponse, errorResponse } from "../utils/response.js";
+import { successResponse, errorResponse } from "../utils/response";
 export class AbsensiSettingController {
     service;
     constructor(service) {

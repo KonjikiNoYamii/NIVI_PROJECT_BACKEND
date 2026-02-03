@@ -1,4 +1,4 @@
-import { PrismaClient, Prisma, Submission } from "../../dist/generated/index.js";
+import { PrismaClient, Prisma, Submission } from "../../dist/generated";
 export declare class SubmissionRepository {
     private prisma;
     constructor(prisma: PrismaClient);

@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { DashboardService } from "../../service/dashboard/p-dashboard.service.js";
+import { DashboardService } from "../../service/dashboard/p-dashboard.service";
 export declare class DashboardController {
     private service;
     constructor(service: DashboardService);

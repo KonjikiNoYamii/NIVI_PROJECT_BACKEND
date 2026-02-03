@@ -1,6 +1,6 @@
 import type { Request, Response } from "express";
-import { SubmissionService } from "../service/submission.service.js";
-import { TugasService } from "../service/tugas.service.js";
+import { SubmissionService } from "../service/submission.service";
+import { TugasService } from "../service/tugas.service";
 export declare class SubmissionController {
     private service;
     private tugasService;

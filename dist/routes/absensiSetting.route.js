@@ -1,9 +1,9 @@
 import { Router } from "express";
-import { AbsensiSettingRepository } from "../repository/absensiSetting.repository.js";
-import { AbsensiSettingService } from "../service/absensiSetting.service.js";
-import { AbsensiSettingController } from "../controller/absensiSetting.controller.js";
-import { authenticate } from "../middlewares/auth.middleware.js";
-import prismaInstance from "../database.js";
+import { AbsensiSettingRepository } from "../repository/absensiSetting.repository";
+import { AbsensiSettingService } from "../service/absensiSetting.service";
+import { AbsensiSettingController } from "../controller/absensiSetting.controller";
+import { authenticate } from "../middlewares/auth.middleware";
+import prismaInstance from "../database";
 const repo = new AbsensiSettingRepository(prismaInstance);
 const service = new AbsensiSettingService(repo);
 const controller = new AbsensiSettingController(service);

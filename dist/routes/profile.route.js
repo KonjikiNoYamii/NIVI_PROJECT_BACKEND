@@ -1,12 +1,12 @@
 import { Router } from "express";
-import { ProfileRepository } from "../repository/profile.repository.js";
-import { ProfileService } from "../service/profile.service.js";
-import { ProfileController } from "../controller/profile.controller.js";
-import prismaInstance from "../database.js";
-import { authenticate } from "../middlewares/auth.middleware.js";
-import { roleMiddleware } from "../middlewares/role.middleware.js";
-import { Role } from "../../dist/generated/index.js";
-import { upload } from "../middlewares/upload.middleware.js";
+import { ProfileRepository } from "../repository/profile.repository";
+import { ProfileService } from "../service/profile.service";
+import { ProfileController } from "../controller/profile.controller";
+import prismaInstance from "../database";
+import { authenticate } from "../middlewares/auth.middleware";
+import { roleMiddleware } from "../middlewares/role.middleware";
+import { Role } from "../../dist/generated";
+import { upload } from "../middlewares/upload.middleware";
 const router = Router();
 // DEPENDENCY INJECTION
 const profileRepository = new ProfileRepository(prismaInstance);

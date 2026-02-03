@@ -1,4 +1,4 @@
-import { Role } from "../../dist/generated/index.js";
+import { Role } from "../../dist/generated";
 export class AdminRepository {
     prisma;
     constructor(prisma) {

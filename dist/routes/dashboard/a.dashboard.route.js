@@ -1,11 +1,11 @@
 import { Router } from "express";
-import prismaInstance from "../../database.js";
-import { authenticate } from "../../middlewares/auth.middleware.js";
-import { AdminDashboardRepository } from "../../repository/dashboard/a-dashboard.repository.js";
-import { AdminDashboardService } from "../../service/dashboard/a-dashboard.service.js";
-import { AdminDashboardController } from "../../controller/dashboard/a-dashboard.controller.js";
-import { roleMiddleware } from "../../middlewares/role.middleware.js";
-import { Role } from "../../../dist/generated/index.js";
+import prismaInstance from "../../database";
+import { authenticate } from "../../middlewares/auth.middleware";
+import { AdminDashboardRepository } from "../../repository/dashboard/a-dashboard.repository";
+import { AdminDashboardService } from "../../service/dashboard/a-dashboard.service";
+import { AdminDashboardController } from "../../controller/dashboard/a-dashboard.controller";
+import { roleMiddleware } from "../../middlewares/role.middleware";
+import { Role } from "../../../dist/generated";
 const router = Router();
 const repo = new AdminDashboardRepository(prismaInstance);
 const service = new AdminDashboardService(repo);

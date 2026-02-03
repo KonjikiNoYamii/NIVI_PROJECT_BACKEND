@@ -1,4 +1,4 @@
-import { PrismaClient, Izin } from "../../dist/generated/index.js";
+import { PrismaClient, Izin } from "../../dist/generated";
 export declare class IzinRepository {
     private prisma;
     constructor(prisma: PrismaClient);
@@ -16,7 +16,7 @@ export declare class IzinRepository {
             isActive: boolean;
             otp: string | null;
             otpExpiresAt: Date | null;
-            role: import("../../dist/generated/index.js").$Enums.Role;
+            role: import("../../dist/generated").$Enums.Role;
             deletedAt: Date | null;
         };
         kelas: {
@@ -29,7 +29,7 @@ export declare class IzinRepository {
         userId: number;
         kelasId: number;
         tanggal: Date;
-        status: import("../../dist/generated/index.js").$Enums.StatusIzin;
+        status: import("../../dist/generated").$Enums.StatusIzin;
         createdAt: Date;
         deletedAt: Date | null;
         alasan: string;
@@ -39,7 +39,7 @@ export declare class IzinRepository {
         userId: number;
         kelasId: number;
         tanggal: Date;
-        status: import("../../dist/generated/index.js").$Enums.StatusIzin;
+        status: import("../../dist/generated").$Enums.StatusIzin;
         createdAt: Date;
         deletedAt: Date | null;
         alasan: string;

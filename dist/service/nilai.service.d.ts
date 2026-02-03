@@ -1,8 +1,8 @@
-import { NilaiRepository } from "../repository/nilai.repository.js";
+import { NilaiRepository } from "../repository/nilai.repository";
 export declare class NilaiService {
     private repo;
     constructor(repo: NilaiRepository);
-    getAll(): import("../../dist/generated/index.js").Prisma.PrismaPromise<({
+    getAll(): import("../../dist/generated").Prisma.PrismaPromise<({
         submission: {
             user: {
                 name: string | null;
@@ -15,7 +15,7 @@ export declare class NilaiService {
                 isActive: boolean;
                 otp: string | null;
                 otpExpiresAt: Date | null;
-                role: import("../../dist/generated/index.js").$Enums.Role;
+                role: import("../../dist/generated").$Enums.Role;
                 deletedAt: Date | null;
             };
             tugas: {
@@ -32,7 +32,7 @@ export declare class NilaiService {
         } & {
             id: number;
             userId: number;
-            status: import("../../dist/generated/index.js").$Enums.StatusSubmission;
+            status: import("../../dist/generated").$Enums.StatusSubmission;
             deletedAt: Date | null;
             tugasId: number;
             fileUrl: string | null;
@@ -46,13 +46,13 @@ export declare class NilaiService {
         submissionId: number;
         catatan: string | null;
     })[]>;
-    getBySubmission(submissionId: number): import("../../dist/generated/index.js").Prisma.Prisma__NilaiClient<{
+    getBySubmission(submissionId: number): import("../../dist/generated").Prisma.Prisma__NilaiClient<{
         id: number;
         createdAt: Date;
         nilai: number;
         submissionId: number;
         catatan: string | null;
-    } | null, null, import("../../dist/generated/runtime/client.js").DefaultArgs, import("../../dist/generated/index.js").Prisma.PrismaClientOptions>;
+    } | null, null, import("../../dist/generated/runtime/client").DefaultArgs, import("../../dist/generated").Prisma.PrismaClientOptions>;
     create(payload: {
         submissionId: number;
         nilai: number;
@@ -67,19 +67,19 @@ export declare class NilaiService {
     update(submissionId: number, payload: {
         nilai: number;
         catatan?: string;
-    }): import("../../dist/generated/index.js").Prisma.Prisma__NilaiClient<{
+    }): import("../../dist/generated").Prisma.Prisma__NilaiClient<{
         id: number;
         createdAt: Date;
         nilai: number;
         submissionId: number;
         catatan: string | null;
-    }, never, import("../../dist/generated/runtime/client.js").DefaultArgs, import("../../dist/generated/index.js").Prisma.PrismaClientOptions>;
-    delete(submissionId: number): import("../../dist/generated/index.js").Prisma.Prisma__NilaiClient<{
+    }, never, import("../../dist/generated/runtime/client").DefaultArgs, import("../../dist/generated").Prisma.PrismaClientOptions>;
+    delete(submissionId: number): import("../../dist/generated").Prisma.Prisma__NilaiClient<{
         id: number;
         createdAt: Date;
         nilai: number;
         submissionId: number;
         catatan: string | null;
-    }, never, import("../../dist/generated/runtime/client.js").DefaultArgs, import("../../dist/generated/index.js").Prisma.PrismaClientOptions>;
+    }, never, import("../../dist/generated/runtime/client").DefaultArgs, import("../../dist/generated").Prisma.PrismaClientOptions>;
 }
 //# sourceMappingURL=nilai.service.d.ts.map

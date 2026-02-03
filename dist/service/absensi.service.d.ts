@@ -1,9 +1,9 @@
-import { AbsensiRepository } from "../repository/absensi.repository.js";
-import { AbsensiSettingService } from "./absensiSetting.service.js";
-import { StatusAbsensi } from "../../dist/generated/index.js";
-import { JadwalAbsensiRepository } from "../repository/jadwalAbsensi.repository.js";
-import { AIAssistantService } from "./ai.assistant.service.js";
-import { IzinRepository } from "../repository/izin.repository.js";
+import { AbsensiRepository } from "../repository/absensi.repository";
+import { AbsensiSettingService } from "./absensiSetting.service";
+import { StatusAbsensi } from "../../dist/generated";
+import { JadwalAbsensiRepository } from "../repository/jadwalAbsensi.repository";
+import { AIAssistantService } from "./ai.assistant.service";
+import { IzinRepository } from "../repository/izin.repository";
 export declare class AbsensiService {
     private absensiRepo;
     private settingService;
@@ -17,7 +17,7 @@ export declare class AbsensiService {
         kelasId: number;
         jadwalId: number | null;
         tanggal: Date;
-        status: import("../../dist/generated/index.js").$Enums.StatusAbsensi;
+        status: import("../../dist/generated").$Enums.StatusAbsensi;
         createdAt: Date;
         aiComment: string | null;
         aiTone: string | null;
@@ -29,7 +29,7 @@ export declare class AbsensiService {
         kelasId: number;
         jadwalId: number | null;
         tanggal: Date;
-        status: import("../../dist/generated/index.js").$Enums.StatusAbsensi;
+        status: import("../../dist/generated").$Enums.StatusAbsensi;
         createdAt: Date;
         aiComment: string | null;
         aiTone: string | null;
@@ -41,7 +41,7 @@ export declare class AbsensiService {
         kelasId: number;
         jadwalId: number | null;
         tanggal: Date;
-        status: import("../../dist/generated/index.js").$Enums.StatusAbsensi;
+        status: import("../../dist/generated").$Enums.StatusAbsensi;
         createdAt: Date;
         aiComment: string | null;
         aiTone: string | null;
@@ -53,7 +53,7 @@ export declare class AbsensiService {
         kelasId: number;
         jadwalId: number | null;
         tanggal: Date;
-        status: import("../../dist/generated/index.js").$Enums.StatusAbsensi;
+        status: import("../../dist/generated").$Enums.StatusAbsensi;
         createdAt: Date;
         aiComment: string | null;
         aiTone: string | null;
@@ -65,7 +65,7 @@ export declare class AbsensiService {
         kelasId: number;
         jadwalId: number | null;
         tanggal: Date;
-        status: import("../../dist/generated/index.js").$Enums.StatusAbsensi;
+        status: import("../../dist/generated").$Enums.StatusAbsensi;
         createdAt: Date;
         aiComment: string | null;
         aiTone: string | null;
@@ -79,7 +79,7 @@ export declare class AbsensiService {
         kelasId: number;
         jadwalId: number | null;
         tanggal: Date;
-        status: import("../../dist/generated/index.js").$Enums.StatusAbsensi;
+        status: import("../../dist/generated").$Enums.StatusAbsensi;
         createdAt: Date;
         aiComment: string | null;
         aiTone: string | null;
@@ -91,7 +91,7 @@ export declare class AbsensiService {
         kelasId: number;
         jadwalId: number | null;
         tanggal: Date;
-        status: import("../../dist/generated/index.js").$Enums.StatusAbsensi;
+        status: import("../../dist/generated").$Enums.StatusAbsensi;
         createdAt: Date;
         aiComment: string | null;
         aiTone: string | null;
@@ -109,7 +109,7 @@ export declare class AbsensiService {
             kelasId: number;
             jadwalId: number | null;
             tanggal: Date;
-            status: import("../../dist/generated/index.js").$Enums.StatusAbsensi;
+            status: import("../../dist/generated").$Enums.StatusAbsensi;
             createdAt: Date;
             aiComment: string | null;
             aiTone: string | null;

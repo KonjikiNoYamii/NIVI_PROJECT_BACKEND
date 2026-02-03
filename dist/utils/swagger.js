@@ -1,28 +1,28 @@
-import config from "../utils/env.js";
+import config from "../utils/env";
 import swaggerJSDoc from "swagger-jsdoc";
 const option = {
     definition: {
-        openapi: "3.0.0",
+        openapi: '3.0.0',
         info: {
-            title: "YAMI PERPUSTAKAAN API",
-            version: "1.0.0",
-            description: "Dokumentasi Perpustakaan",
+            title: 'YAMI PERPUSTAKAAN API',
+            version: '1.0.0',
+            description: 'Dokumentasi Perpustakaan',
             contact: {
-                name: "Backend developer"
+                name: 'Backend developer'
             },
         },
         servers: [
             {
                 url: `http://${config.HOST}:${config.PORT}`,
-                description: "Production"
+                description: 'Production'
             }
         ],
         components: {
             securitySchemes: {
                 bearerAuth: {
-                    type: "http",
-                    scheme: "bearer",
-                    bearerFormat: "JWT"
+                    type: 'http',
+                    scheme: 'bearer',
+                    bearerFormat: 'JWT'
                 }
             }
         },
@@ -32,7 +32,7 @@ const option = {
             },
         ],
     },
-    apis: ["src/routes/*.ts"]
+    apis: ['src/routes/*.ts']
 };
 const swaggerSpec = swaggerJSDoc(option);
 export default swaggerSpec;

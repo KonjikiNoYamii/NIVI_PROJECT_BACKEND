@@ -1,9 +1,9 @@
 import { Router } from "express";
-import prisma from "../database.js";
-import { MataPelajaranRepository } from "../repository/mataPelajaran.repository.js";
-import { MataPelajaranService } from "../service/mataPelajaran.service.js";
-import { MataPelajaranController } from "../controller/mataPelajaran.controller.js";
-import { authenticate } from "../middlewares/auth.middleware.js";
+import prisma from "../database";
+import { MataPelajaranRepository } from "../repository/mataPelajaran.repository";
+import { MataPelajaranService } from "../service/mataPelajaran.service";
+import { MataPelajaranController } from "../controller/mataPelajaran.controller";
+import { authenticate } from "../middlewares/auth.middleware";
 const router = Router();
 const repo = new MataPelajaranRepository(prisma);
 const service = new MataPelajaranService(repo);

@@ -1,4 +1,4 @@
-import { MataPelajaranRepository } from "../repository/mataPelajaran.repository.js";
+import { MataPelajaranRepository } from "../repository/mataPelajaran.repository";
 export declare class MataPelajaranService {
     private repo;
     constructor(repo: MataPelajaranRepository);

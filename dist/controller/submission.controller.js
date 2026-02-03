@@ -1,4 +1,4 @@
-import { errorResponse, successResponse } from "../utils/response.js";
+import { errorResponse, successResponse } from "../utils/response";
 export class SubmissionController {
     service;
     tugasService;
@@ -59,7 +59,7 @@ export class SubmissionController {
             const { id } = req.params;
             const { status } = req.body; // 'reviewed' | 'rejected'
             // Validasi status
-            if (!["reviewed", "rejected"].includes(status)) {
+            if (!['reviewed', 'rejected'].includes(status)) {
                 return res.status(400).json({ message: "Status tidak valid" });
             }
             const updated = await this.service.updateStatus(+id, status);

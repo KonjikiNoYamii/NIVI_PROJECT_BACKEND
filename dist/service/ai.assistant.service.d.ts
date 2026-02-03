@@ -1,6 +1,6 @@
-import { Role } from "../../dist/generated/index.js";
-import { AIService } from "../ai/ai.service.js";
-import { AbsensiRepository } from "../repository/absensi.repository.js";
+import { Role } from "../../dist/generated";
+import { AIService } from "../ai/ai.service";
+import { AbsensiRepository } from "../repository/absensi.repository";
 export declare class AIAssistantService {
     private absensiRepo;
     private aiService;

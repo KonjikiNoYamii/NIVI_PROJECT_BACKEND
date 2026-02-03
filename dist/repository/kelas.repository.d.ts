@@ -1,8 +1,8 @@
-import { PrismaClient, Kelas } from "../../dist/generated/index.js";
+import { PrismaClient, Kelas } from "../../dist/generated";
 export declare class KelasRepository {
     private prisma;
     constructor(prisma: PrismaClient);
-    getAllKelas(): import("../../dist/generated/index.js").Prisma.PrismaPromise<({
+    getAllKelas(): import("../../dist/generated").Prisma.PrismaPromise<({
         santri: {
             id: number;
         }[];
@@ -39,7 +39,7 @@ export declare class KelasRepository {
     }) => Promise<Kelas>;
     update: (id: number, data: Partial<Kelas>) => Promise<Kelas>;
     delete: (id: number) => Promise<Kelas>;
-    assignPengajar(kelasId: number, pengajarIds: number | number[]): import("../../dist/generated/index.js").Prisma.Prisma__KelasClient<{
+    assignPengajar(kelasId: number, pengajarIds: number | number[]): import("../../dist/generated").Prisma.Prisma__KelasClient<{
         pengajar: {
             name: string | null;
             id: number;
@@ -51,14 +51,14 @@ export declare class KelasRepository {
             isActive: boolean;
             otp: string | null;
             otpExpiresAt: Date | null;
-            role: import("../../dist/generated/index.js").$Enums.Role;
+            role: import("../../dist/generated").$Enums.Role;
             deletedAt: Date | null;
         }[];
     } & {
         id: number;
         namaKelas: string;
         deskripsi: string | null;
-    }, never, import("../../dist/generated/runtime/client.js").DefaultArgs, import("../../dist/generated/index.js").Prisma.PrismaClientOptions>;
+    }, never, import("../../dist/generated/runtime/client").DefaultArgs, import("../../dist/generated").Prisma.PrismaClientOptions>;
     setPengajar: (kelasId: number, pengajarIds: number[]) => Promise<{
         pengajar: {
             name: string | null;
@@ -71,7 +71,7 @@ export declare class KelasRepository {
             isActive: boolean;
             otp: string | null;
             otpExpiresAt: Date | null;
-            role: import("../../dist/generated/index.js").$Enums.Role;
+            role: import("../../dist/generated").$Enums.Role;
             deletedAt: Date | null;
         }[];
         santri: {
@@ -85,7 +85,7 @@ export declare class KelasRepository {
             isActive: boolean;
             otp: string | null;
             otpExpiresAt: Date | null;
-            role: import("../../dist/generated/index.js").$Enums.Role;
+            role: import("../../dist/generated").$Enums.Role;
             deletedAt: Date | null;
         }[];
     } & {
@@ -98,7 +98,7 @@ export declare class KelasRepository {
         namaKelas: string;
         deskripsi: string | null;
     }>;
-    getKelasByPengajar: (pengajarId: number) => import("../../dist/generated/index.js").Prisma.PrismaPromise<{
+    getKelasByPengajar: (pengajarId: number) => import("../../dist/generated").Prisma.PrismaPromise<{
         id: number;
         namaKelas: string;
         deskripsi: string | null;
@@ -110,7 +110,7 @@ export declare class KelasRepository {
             kelasId: number;
             jadwalId: number | null;
             tanggal: Date;
-            status: import("../../dist/generated/index.js").$Enums.StatusAbsensi;
+            status: import("../../dist/generated").$Enums.StatusAbsensi;
             createdAt: Date;
             aiComment: string | null;
             aiTone: string | null;
@@ -121,7 +121,7 @@ export declare class KelasRepository {
             userId: number;
             kelasId: number;
             tanggal: Date;
-            status: import("../../dist/generated/index.js").$Enums.StatusIzin;
+            status: import("../../dist/generated").$Enums.StatusIzin;
             createdAt: Date;
             deletedAt: Date | null;
             alasan: string;
@@ -137,7 +137,7 @@ export declare class KelasRepository {
             isActive: boolean;
             otp: string | null;
             otpExpiresAt: Date | null;
-            role: import("../../dist/generated/index.js").$Enums.Role;
+            role: import("../../dist/generated").$Enums.Role;
             deletedAt: Date | null;
         }[];
         santri: ({
@@ -155,7 +155,7 @@ export declare class KelasRepository {
             isActive: boolean;
             otp: string | null;
             otpExpiresAt: Date | null;
-            role: import("../../dist/generated/index.js").$Enums.Role;
+            role: import("../../dist/generated").$Enums.Role;
             deletedAt: Date | null;
         })[];
         tugas: {
@@ -181,7 +181,7 @@ export declare class KelasRepository {
             kelasId: number;
             tanggal: Date;
             createdAt: Date;
-            hari: import("../../dist/generated/index.js").$Enums.Hari;
+            hari: import("../../dist/generated").$Enums.Hari;
             jamMulai: string;
             jamSelesai: string;
         }[];

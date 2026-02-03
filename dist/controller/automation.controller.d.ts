@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { AbsensiService } from "../service/absensi.service.js";
+import { AbsensiService } from "../service/absensi.service";
 export declare class AutomationController {
     private absensiService;
     constructor(absensiService: AbsensiService);

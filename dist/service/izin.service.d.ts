@@ -1,9 +1,9 @@
-import { IzinRepository } from "../repository/izin.repository.js";
-import { Izin, StatusIzin } from "../../dist/generated/index.js";
-import { AbsensiService } from "./absensi.service.js";
-import { AbsensiSettingService } from "./absensiSetting.service.js";
-import { AbsensiRepository } from "../repository/absensi.repository.js";
-import { JadwalAbsensiRepository } from "../repository/jadwalAbsensi.repository.js";
+import { IzinRepository } from "../repository/izin.repository";
+import { Izin, StatusIzin } from "../../dist/generated";
+import { AbsensiService } from "./absensi.service";
+import { AbsensiSettingService } from "./absensiSetting.service";
+import { AbsensiRepository } from "../repository/absensi.repository";
+import { JadwalAbsensiRepository } from "../repository/jadwalAbsensi.repository";
 export declare class IzinService {
     private izinRepo;
     private absensiRepo;
@@ -16,7 +16,7 @@ export declare class IzinService {
         userId: number;
         kelasId: number;
         tanggal: Date;
-        status: import("../../dist/generated/index.js").$Enums.StatusIzin;
+        status: import("../../dist/generated").$Enums.StatusIzin;
         createdAt: Date;
         deletedAt: Date | null;
         alasan: string;
@@ -26,7 +26,7 @@ export declare class IzinService {
         userId: number;
         kelasId: number;
         tanggal: Date;
-        status: import("../../dist/generated/index.js").$Enums.StatusIzin;
+        status: import("../../dist/generated").$Enums.StatusIzin;
         createdAt: Date;
         deletedAt: Date | null;
         alasan: string;
@@ -43,7 +43,7 @@ export declare class IzinService {
             isActive: boolean;
             otp: string | null;
             otpExpiresAt: Date | null;
-            role: import("../../dist/generated/index.js").$Enums.Role;
+            role: import("../../dist/generated").$Enums.Role;
             deletedAt: Date | null;
         };
         kelas: {
@@ -56,7 +56,7 @@ export declare class IzinService {
         userId: number;
         kelasId: number;
         tanggal: Date;
-        status: import("../../dist/generated/index.js").$Enums.StatusIzin;
+        status: import("../../dist/generated").$Enums.StatusIzin;
         createdAt: Date;
         deletedAt: Date | null;
         alasan: string;
@@ -66,7 +66,7 @@ export declare class IzinService {
         userId: number;
         kelasId: number;
         tanggal: Date;
-        status: import("../../dist/generated/index.js").$Enums.StatusIzin;
+        status: import("../../dist/generated").$Enums.StatusIzin;
         createdAt: Date;
         deletedAt: Date | null;
         alasan: string;
@@ -76,7 +76,7 @@ export declare class IzinService {
         userId: number;
         kelasId: number;
         tanggal: Date;
-        status: import("../../dist/generated/index.js").$Enums.StatusIzin;
+        status: import("../../dist/generated").$Enums.StatusIzin;
         createdAt: Date;
         deletedAt: Date | null;
         alasan: string;
@@ -86,7 +86,7 @@ export declare class IzinService {
         userId: number;
         kelasId: number;
         tanggal: Date;
-        status: import("../../dist/generated/index.js").$Enums.StatusIzin;
+        status: import("../../dist/generated").$Enums.StatusIzin;
         createdAt: Date;
         deletedAt: Date | null;
         alasan: string;
@@ -103,7 +103,7 @@ export declare class IzinService {
         userId: number;
         kelasId: number;
         tanggal: Date;
-        status: import("../../dist/generated/index.js").$Enums.StatusIzin;
+        status: import("../../dist/generated").$Enums.StatusIzin;
         createdAt: Date;
         deletedAt: Date | null;
         alasan: string;

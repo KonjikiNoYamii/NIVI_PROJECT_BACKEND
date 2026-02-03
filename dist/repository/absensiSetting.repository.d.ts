@@ -1,4 +1,4 @@
-import { PrismaClient, AbsensiSetting } from "../../dist/generated/index.js";
+import { PrismaClient, AbsensiSetting } from "../../dist/generated";
 export declare class AbsensiSettingRepository {
     private prisma;
     constructor(prisma: PrismaClient);

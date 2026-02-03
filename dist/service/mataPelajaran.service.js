@@ -1,4 +1,4 @@
-import { Prisma } from "../../dist/generated/index.js";
+import { Prisma } from "../../dist/generated";
 export class MataPelajaranService {
     repo;
     constructor(repo) {

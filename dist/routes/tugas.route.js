@@ -1,9 +1,9 @@
 import { Router } from "express";
-import { TugasRepository } from "../repository/tugas.repository.js";
-import prismaInstance from "../database.js";
-import { TugasService } from "../service/tugas.service.js";
-import { TugasController } from "../controller/tugas.controller.js";
-import { authenticate } from "../middlewares/auth.middleware.js";
+import { TugasRepository } from "../repository/tugas.repository";
+import prismaInstance from "../database";
+import { TugasService } from "../service/tugas.service";
+import { TugasController } from "../controller/tugas.controller";
+import { authenticate } from "../middlewares/auth.middleware";
 const router = Router();
 // INIT LAYER
 const tugasRepo = new TugasRepository(prismaInstance);

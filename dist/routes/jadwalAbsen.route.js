@@ -1,10 +1,10 @@
 import { Router } from "express";
-import prismaInstance from "../database.js";
-import { JadwalAbsensiRepository } from "../repository/jadwalAbsensi.repository.js";
-import { JadwalAbsensiService } from "../service/jadwalAbsensi.service.js";
-import { JadwalAbsensiController } from "../controller/jadwalAbsensi.controller.js";
-import { authenticate } from "../middlewares/auth.middleware.js";
-import { AbsensiSettingRepository } from "../repository/absensiSetting.repository.js";
+import prismaInstance from "../database";
+import { JadwalAbsensiRepository } from "../repository/jadwalAbsensi.repository";
+import { JadwalAbsensiService } from "../service/jadwalAbsensi.service";
+import { JadwalAbsensiController } from "../controller/jadwalAbsensi.controller";
+import { authenticate } from "../middlewares/auth.middleware";
+import { AbsensiSettingRepository } from "../repository/absensiSetting.repository";
 const router = Router();
 const repo = new JadwalAbsensiRepository(prismaInstance);
 const settingRepo = new AbsensiSettingRepository(prismaInstance);

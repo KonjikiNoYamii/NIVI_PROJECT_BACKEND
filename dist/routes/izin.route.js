@@ -1,17 +1,17 @@
 import { Router } from "express";
-import prismaInstance from "../database.js";
-import { IzinRepository } from "../repository/izin.repository.js";
-import { AbsensiRepository } from "../repository/absensi.repository.js";
-import { AbsensiSettingRepository } from "../repository/absensiSetting.repository.js";
-import { JadwalAbsensiRepository } from "../repository/jadwalAbsensi.repository.js";
-import { IzinService } from "../service/izin.service.js";
-import { AbsensiService } from "../service/absensi.service.js";
-import { AbsensiSettingService } from "../service/absensiSetting.service.js";
-import { IzinController } from "../controller/izin.controller.js";
-import { authenticate } from "../middlewares/auth.middleware.js";
-import { roleMiddleware } from "../middlewares/role.middleware.js";
-import { AIAssistantService } from "../service/ai.assistant.service.js";
-import { AIService } from "../ai/ai.service.js";
+import prismaInstance from "../database";
+import { IzinRepository } from "../repository/izin.repository";
+import { AbsensiRepository } from "../repository/absensi.repository";
+import { AbsensiSettingRepository } from "../repository/absensiSetting.repository";
+import { JadwalAbsensiRepository } from "../repository/jadwalAbsensi.repository";
+import { IzinService } from "../service/izin.service";
+import { AbsensiService } from "../service/absensi.service";
+import { AbsensiSettingService } from "../service/absensiSetting.service";
+import { IzinController } from "../controller/izin.controller";
+import { authenticate } from "../middlewares/auth.middleware";
+import { roleMiddleware } from "../middlewares/role.middleware";
+import { AIAssistantService } from "../service/ai.assistant.service";
+import { AIService } from "../ai/ai.service";
 const router = Router();
 /* =======================
    INIT REPOSITORY

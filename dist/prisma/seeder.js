@@ -1,6 +1,6 @@
-import prisma from "../database.js";
+import prisma from "../database";
 async function resetData() {
-    console.log("\uD83E\uDDF9 Menghapus data lama...");
+    console.log('🧹 Menghapus data lama...');
     // Hapus data tabel yang bergantung dulu (Nilai -> Submission -> Tugas -> User)
     await prisma.absensi.deleteMany({});
     await prisma.izin.deleteMany({});
@@ -8,7 +8,7 @@ async function resetData() {
     // Opsional: hapus User, Kelas, dll jika mau reset total
     // await prisma.user.deleteMany({});
     // await prisma.kelas.deleteMany({});
-    console.log("\u2705 Data berhasil di-reset");
+    console.log('✅ Data berhasil di-reset');
 }
 resetData()
     .catch(e => console.error(e))

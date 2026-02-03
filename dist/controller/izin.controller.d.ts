@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { IzinService } from "../service/izin.service.js";
+import { IzinService } from "../service/izin.service";
 export declare class IzinController {
     private izinService;
     constructor(izinService: IzinService);

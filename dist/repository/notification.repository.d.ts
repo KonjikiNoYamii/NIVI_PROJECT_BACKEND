@@ -1,4 +1,4 @@
-import { PrismaClient, Notification } from "../../dist/generated/index.js";
+import { PrismaClient, Notification } from "../../dist/generated";
 export declare class NotificationRepository {
     private prisma;
     constructor(prisma: PrismaClient);

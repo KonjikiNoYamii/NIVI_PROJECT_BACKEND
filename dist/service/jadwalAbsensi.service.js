@@ -1,4 +1,4 @@
-import { Hari } from "../../dist/generated/index.js";
+import { Hari } from "../../dist/generated";
 export class JadwalAbsensiService {
     repo;
     settingRepo;
@@ -10,7 +10,7 @@ export class JadwalAbsensiService {
         // 1️⃣ pastikan absensi setting ada
         const setting = await this.settingRepo.getByKelas(data.kelasId);
         if (!setting) {
-            throw new Error("Absensi setting belum dibuat");
+            throw new Error('Absensi setting belum dibuat');
         }
         // 2️⃣ validasi max absen
         const totalJadwal = await this.repo.countByKelas(data.kelasId);
@@ -20,7 +20,7 @@ export class JadwalAbsensiService {
         // 3️⃣ validasi bentrok jam
         const bentrok = await this.repo.findBentrok(data.kelasId, data.tanggal, data.jamMulai, data.jamSelesai);
         if (bentrok) {
-            throw new Error("Jadwal bentrok dengan sesi lain");
+            throw new Error('Jadwal bentrok dengan sesi lain');
         }
         // 4️⃣ create
         return this.repo.create(data);

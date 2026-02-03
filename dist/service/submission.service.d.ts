@@ -1,5 +1,5 @@
-import { SubmissionRepository } from "../repository/submission.repository.js";
-import { Submission } from "../../dist/generated/index.js";
+import { SubmissionRepository } from "../repository/submission.repository";
+import { Submission } from "../../dist/generated";
 export declare class SubmissionService {
     private repo;
     constructor(repo: SubmissionRepository);
@@ -31,7 +31,7 @@ export declare class SubmissionService {
     updateStatus: (id: number, status: "reviewed" | "rejected") => Promise<{
         id: number;
         userId: number;
-        status: import("../../dist/generated/index.js").$Enums.StatusSubmission;
+        status: import("../../dist/generated").$Enums.StatusSubmission;
         deletedAt: Date | null;
         tugasId: number;
         fileUrl: string | null;
@@ -41,7 +41,7 @@ export declare class SubmissionService {
     softDelete: (id: number) => Promise<{
         id: number;
         userId: number;
-        status: import("../../dist/generated/index.js").$Enums.StatusSubmission;
+        status: import("../../dist/generated").$Enums.StatusSubmission;
         deletedAt: Date | null;
         tugasId: number;
         fileUrl: string | null;
@@ -51,7 +51,7 @@ export declare class SubmissionService {
     restore: (id: number) => Promise<{
         id: number;
         userId: number;
-        status: import("../../dist/generated/index.js").$Enums.StatusSubmission;
+        status: import("../../dist/generated").$Enums.StatusSubmission;
         deletedAt: Date | null;
         tugasId: number;
         fileUrl: string | null;
@@ -61,7 +61,7 @@ export declare class SubmissionService {
     findArsipForPengajar: (pengajarId: number) => Promise<{
         id: number;
         userId: number;
-        status: import("../../dist/generated/index.js").$Enums.StatusSubmission;
+        status: import("../../dist/generated").$Enums.StatusSubmission;
         deletedAt: Date | null;
         tugasId: number;
         fileUrl: string | null;

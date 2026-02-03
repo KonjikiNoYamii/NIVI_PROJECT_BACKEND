@@ -1,12 +1,12 @@
 import { Router } from "express";
-import { SubmissionRepository } from "../repository/submission.repository.js";
-import { SubmissionService } from "../service/submission.service.js";
-import { SubmissionController } from "../controller/submission.controller.js";
-import prismaInstance from "../database.js";
-import { authenticate } from "../middlewares/auth.middleware.js";
-import { roleMiddleware } from "../middlewares/role.middleware.js";
-import { TugasRepository } from "../repository/tugas.repository.js";
-import { TugasService } from "../service/tugas.service.js";
+import { SubmissionRepository } from "../repository/submission.repository";
+import { SubmissionService } from "../service/submission.service";
+import { SubmissionController } from "../controller/submission.controller";
+import prismaInstance from "../database";
+import { authenticate } from "../middlewares/auth.middleware";
+import { roleMiddleware } from "../middlewares/role.middleware";
+import { TugasRepository } from "../repository/tugas.repository";
+import { TugasService } from "../service/tugas.service";
 const router = Router();
 // === Dependency Injection ===
 const repository = new SubmissionRepository(prismaInstance);

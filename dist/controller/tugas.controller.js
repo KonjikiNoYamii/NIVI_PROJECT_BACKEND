@@ -1,4 +1,4 @@
-import { successResponse } from "../utils/response.js";
+import { successResponse } from "../utils/response";
 export class TugasController {
     service;
     constructor(service) {
@@ -11,7 +11,7 @@ export class TugasController {
     getById = async (req, res) => {
         const id = Number(req.params.id);
         if (isNaN(id)) {
-            return res.status(400).json({ message: "ID tidak valid" });
+            return res.status(400).json({ message: 'ID tidak valid' });
         }
         const data = await this.service.getById(id);
         successResponse(res, "Detail tugas", data);

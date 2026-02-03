@@ -1,5 +1,5 @@
-import { Kelas } from "../../dist/generated/index.js";
-import { KelasRepository } from "../repository/kelas.repository.js";
+import { Kelas } from "../../dist/generated";
+import { KelasRepository } from "../repository/kelas.repository";
 export declare class KelasService {
     private kelasRepository;
     constructor(kelasRepository: KelasRepository);
@@ -26,7 +26,7 @@ export declare class KelasService {
             isActive: boolean;
             otp: string | null;
             otpExpiresAt: Date | null;
-            role: import("../../dist/generated/index.js").$Enums.Role;
+            role: import("../../dist/generated").$Enums.Role;
             deletedAt: Date | null;
         }[];
     } & {
@@ -46,7 +46,7 @@ export declare class KelasService {
             isActive: boolean;
             otp: string | null;
             otpExpiresAt: Date | null;
-            role: import("../../dist/generated/index.js").$Enums.Role;
+            role: import("../../dist/generated").$Enums.Role;
             deletedAt: Date | null;
         }[];
         santri: {
@@ -60,7 +60,7 @@ export declare class KelasService {
             isActive: boolean;
             otp: string | null;
             otpExpiresAt: Date | null;
-            role: import("../../dist/generated/index.js").$Enums.Role;
+            role: import("../../dist/generated").$Enums.Role;
             deletedAt: Date | null;
         }[];
     } & {
@@ -75,7 +75,7 @@ export declare class KelasService {
             kelasId: number;
             jadwalId: number | null;
             tanggal: Date;
-            status: import("../../dist/generated/index.js").$Enums.StatusAbsensi;
+            status: import("../../dist/generated").$Enums.StatusAbsensi;
             createdAt: Date;
             aiComment: string | null;
             aiTone: string | null;
@@ -86,7 +86,7 @@ export declare class KelasService {
             userId: number;
             kelasId: number;
             tanggal: Date;
-            status: import("../../dist/generated/index.js").$Enums.StatusIzin;
+            status: import("../../dist/generated").$Enums.StatusIzin;
             createdAt: Date;
             deletedAt: Date | null;
             alasan: string;
@@ -102,7 +102,7 @@ export declare class KelasService {
             isActive: boolean;
             otp: string | null;
             otpExpiresAt: Date | null;
-            role: import("../../dist/generated/index.js").$Enums.Role;
+            role: import("../../dist/generated").$Enums.Role;
             deletedAt: Date | null;
         }[];
         santri: ({
@@ -120,7 +120,7 @@ export declare class KelasService {
             isActive: boolean;
             otp: string | null;
             otpExpiresAt: Date | null;
-            role: import("../../dist/generated/index.js").$Enums.Role;
+            role: import("../../dist/generated").$Enums.Role;
             deletedAt: Date | null;
         })[];
         tugas: {
@@ -146,7 +146,7 @@ export declare class KelasService {
             kelasId: number;
             tanggal: Date;
             createdAt: Date;
-            hari: import("../../dist/generated/index.js").$Enums.Hari;
+            hari: import("../../dist/generated").$Enums.Hari;
             jamMulai: string;
             jamSelesai: string;
         }[];

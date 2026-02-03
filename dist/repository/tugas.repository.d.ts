@@ -1,4 +1,4 @@
-import { PrismaClient } from "../../dist/generated/index.js";
+import { PrismaClient } from "../../dist/generated";
 export declare class TugasRepository {
     private prisma;
     constructor(prisma: PrismaClient);
@@ -25,7 +25,7 @@ export declare class TugasRepository {
             isActive: boolean;
             otp: string | null;
             otpExpiresAt: Date | null;
-            role: import("../../dist/generated/index.js").$Enums.Role;
+            role: import("../../dist/generated").$Enums.Role;
             deletedAt: Date | null;
         };
     } & {
@@ -48,7 +48,7 @@ export declare class TugasRepository {
         submission: {
             id: number;
             userId: number;
-            status: import("../../dist/generated/index.js").$Enums.StatusSubmission;
+            status: import("../../dist/generated").$Enums.StatusSubmission;
             deletedAt: Date | null;
             tugasId: number;
             fileUrl: string | null;
@@ -72,7 +72,7 @@ export declare class TugasRepository {
             isActive: boolean;
             otp: string | null;
             otpExpiresAt: Date | null;
-            role: import("../../dist/generated/index.js").$Enums.Role;
+            role: import("../../dist/generated").$Enums.Role;
             deletedAt: Date | null;
         };
     } & {
@@ -93,7 +93,7 @@ export declare class TugasRepository {
         kelasId: number;
         mataPelajaranId: number;
         createdBy: number;
-    }): import("../../dist/generated/index.js").Prisma.Prisma__TugasClient<{
+    }): import("../../dist/generated").Prisma.Prisma__TugasClient<{
         id: number;
         kelasId: number;
         createdAt: Date;
@@ -103,7 +103,7 @@ export declare class TugasRepository {
         description: string | null;
         deadline: Date;
         createdBy: number;
-    }, never, import("../../dist/generated/runtime/client.js").DefaultArgs, import("../../dist/generated/index.js").Prisma.PrismaClientOptions>;
+    }, never, import("../../dist/generated/runtime/client").DefaultArgs, import("../../dist/generated").Prisma.PrismaClientOptions>;
     update: (id: number, data: {
         title?: string;
         description?: string;
@@ -140,7 +140,7 @@ export declare class TugasRepository {
         submission: {
             id: number;
             userId: number;
-            status: import("../../dist/generated/index.js").$Enums.StatusSubmission;
+            status: import("../../dist/generated").$Enums.StatusSubmission;
             deletedAt: Date | null;
             tugasId: number;
             fileUrl: string | null;
@@ -164,7 +164,7 @@ export declare class TugasRepository {
             isActive: boolean;
             otp: string | null;
             otpExpiresAt: Date | null;
-            role: import("../../dist/generated/index.js").$Enums.Role;
+            role: import("../../dist/generated").$Enums.Role;
             deletedAt: Date | null;
         };
     } & {
@@ -193,7 +193,7 @@ export declare class TugasRepository {
         submission: {
             id: number;
             userId: number;
-            status: import("../../dist/generated/index.js").$Enums.StatusSubmission;
+            status: import("../../dist/generated").$Enums.StatusSubmission;
             deletedAt: Date | null;
             tugasId: number;
             fileUrl: string | null;
@@ -217,7 +217,7 @@ export declare class TugasRepository {
             isActive: boolean;
             otp: string | null;
             otpExpiresAt: Date | null;
-            role: import("../../dist/generated/index.js").$Enums.Role;
+            role: import("../../dist/generated").$Enums.Role;
             deletedAt: Date | null;
         };
     } & {

@@ -1,4 +1,4 @@
-import { TugasRepository } from "../repository/tugas.repository.js";
+import { TugasRepository } from "../repository/tugas.repository";
 export declare class TugasService {
     private repo;
     constructor(repo: TugasRepository);
@@ -25,7 +25,7 @@ export declare class TugasService {
             isActive: boolean;
             otp: string | null;
             otpExpiresAt: Date | null;
-            role: import("../../dist/generated/index.js").$Enums.Role;
+            role: import("../../dist/generated").$Enums.Role;
             deletedAt: Date | null;
         };
     } & {
@@ -48,7 +48,7 @@ export declare class TugasService {
         submission: {
             id: number;
             userId: number;
-            status: import("../../dist/generated/index.js").$Enums.StatusSubmission;
+            status: import("../../dist/generated").$Enums.StatusSubmission;
             deletedAt: Date | null;
             tugasId: number;
             fileUrl: string | null;
@@ -72,7 +72,7 @@ export declare class TugasService {
             isActive: boolean;
             otp: string | null;
             otpExpiresAt: Date | null;
-            role: import("../../dist/generated/index.js").$Enums.Role;
+            role: import("../../dist/generated").$Enums.Role;
             deletedAt: Date | null;
         };
     } & {
@@ -140,7 +140,7 @@ export declare class TugasService {
         submission: {
             id: number;
             userId: number;
-            status: import("../../dist/generated/index.js").$Enums.StatusSubmission;
+            status: import("../../dist/generated").$Enums.StatusSubmission;
             deletedAt: Date | null;
             tugasId: number;
             fileUrl: string | null;
@@ -164,7 +164,7 @@ export declare class TugasService {
             isActive: boolean;
             otp: string | null;
             otpExpiresAt: Date | null;
-            role: import("../../dist/generated/index.js").$Enums.Role;
+            role: import("../../dist/generated").$Enums.Role;
             deletedAt: Date | null;
         };
     } & {
@@ -193,7 +193,7 @@ export declare class TugasService {
         submission: {
             id: number;
             userId: number;
-            status: import("../../dist/generated/index.js").$Enums.StatusSubmission;
+            status: import("../../dist/generated").$Enums.StatusSubmission;
             deletedAt: Date | null;
             tugasId: number;
             fileUrl: string | null;
@@ -217,7 +217,7 @@ export declare class TugasService {
             isActive: boolean;
             otp: string | null;
             otpExpiresAt: Date | null;
-            role: import("../../dist/generated/index.js").$Enums.Role;
+            role: import("../../dist/generated").$Enums.Role;
             deletedAt: Date | null;
         };
     } & {

@@ -372,4 +372,15 @@ findByUserAndJadwal(
   });
 }
 
+async countByJadwalAndKelas(jadwalId: number, kelasId: number): Promise<number> {
+  return this.prisma.absensi.count({
+    where: {
+      kelasId,
+      jadwalId,
+      status: { not: "izin" }, // hitung hanya absensi normal, bukan izin
+    },
+  });
+}
+
+
 }

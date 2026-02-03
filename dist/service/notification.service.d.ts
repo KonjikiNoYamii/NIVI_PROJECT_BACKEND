@@ -1,5 +1,5 @@
-import { Notification } from "../../dist/generated/index.js";
-import { NotificationRepository } from "../repository/notification.repository.js";
+import { Notification } from "../../dist/generated";
+import { NotificationRepository } from "../repository/notification.repository";
 export declare class NotificationService {
     private notificationRepo;
     constructor(notificationRepo: NotificationRepository);

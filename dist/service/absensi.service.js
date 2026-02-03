@@ -1,4 +1,4 @@
-import { StatusAbsensi } from "../../dist/generated/index.js";
+import { StatusAbsensi } from "../../dist/generated";
 import cron from "node-cron";
 export class AbsensiService {
     absensiRepo;

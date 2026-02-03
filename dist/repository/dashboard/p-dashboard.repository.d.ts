@@ -1,10 +1,10 @@
-import { PrismaClient } from "../../../dist/generated/index.js";
+import { PrismaClient } from "../../../dist/generated";
 export declare class DashboardRepository {
     private prisma;
     constructor(prisma: PrismaClient);
     getTotalSantriByPengajar(kelasIds: number[]): Promise<number>;
     getTotalKelasByPengajar(pengajarId: number): Promise<number>;
-    getAbsensiHariIni(kelasIds: number[], date: Date): Promise<(import("../../../dist/generated/index.js").Prisma.PickEnumerable<import("../../../dist/generated/index.js").Prisma.AbsensiGroupByOutputType, "status"[]> & {
+    getAbsensiHariIni(kelasIds: number[], date: Date): Promise<(import("../../../dist/generated").Prisma.PickEnumerable<import("../../../dist/generated").Prisma.AbsensiGroupByOutputType, "status"[]> & {
         _count: {
             _all: number;
         };

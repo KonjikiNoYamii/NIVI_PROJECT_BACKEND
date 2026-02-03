@@ -1,4 +1,4 @@
-import { Role } from "../../dist/generated/index.js";
+import { Role } from "../../dist/generated";
 import bcrypt from "bcrypt";
 export class UserService {
     userRepository;

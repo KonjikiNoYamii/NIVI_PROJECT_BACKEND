@@ -1,4 +1,4 @@
-import { PrismaClient, Prisma, Nilai } from "../../dist/generated/index.js";
+import { PrismaClient, Prisma, Nilai } from "../../dist/generated";
 export declare class NilaiRepository {
     private prisma;
     constructor(prisma: PrismaClient);
@@ -15,7 +15,7 @@ export declare class NilaiRepository {
                 isActive: boolean;
                 otp: string | null;
                 otpExpiresAt: Date | null;
-                role: import("../../dist/generated/index.js").$Enums.Role;
+                role: import("../../dist/generated").$Enums.Role;
                 deletedAt: Date | null;
             };
             tugas: {
@@ -32,7 +32,7 @@ export declare class NilaiRepository {
         } & {
             id: number;
             userId: number;
-            status: import("../../dist/generated/index.js").$Enums.StatusSubmission;
+            status: import("../../dist/generated").$Enums.StatusSubmission;
             deletedAt: Date | null;
             tugasId: number;
             fileUrl: string | null;
@@ -52,7 +52,7 @@ export declare class NilaiRepository {
         nilai: number;
         submissionId: number;
         catatan: string | null;
-    } | null, null, import("../../dist/generated/runtime/client.js").DefaultArgs, Prisma.PrismaClientOptions>;
+    } | null, null, import("../../dist/generated/runtime/client").DefaultArgs, Prisma.PrismaClientOptions>;
     create(data: Prisma.NilaiCreateInput): Promise<Nilai>;
     update(submissionId: number, data: Prisma.NilaiUpdateInput): Prisma.Prisma__NilaiClient<{
         id: number;
@@ -60,13 +60,13 @@ export declare class NilaiRepository {
         nilai: number;
         submissionId: number;
         catatan: string | null;
-    }, never, import("../../dist/generated/runtime/client.js").DefaultArgs, Prisma.PrismaClientOptions>;
+    }, never, import("../../dist/generated/runtime/client").DefaultArgs, Prisma.PrismaClientOptions>;
     delete(submissionId: number): Prisma.Prisma__NilaiClient<{
         id: number;
         createdAt: Date;
         nilai: number;
         submissionId: number;
         catatan: string | null;
-    }, never, import("../../dist/generated/runtime/client.js").DefaultArgs, Prisma.PrismaClientOptions>;
+    }, never, import("../../dist/generated/runtime/client").DefaultArgs, Prisma.PrismaClientOptions>;
 }
 //# sourceMappingURL=nilai.repository.d.ts.map

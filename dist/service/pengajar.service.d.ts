@@ -1,4 +1,4 @@
-import { PengajarRepository } from "../repository/pengajar.repository.js";
+import { PengajarRepository } from "../repository/pengajar.repository";
 export declare class PengajarService {
     private prisma;
     constructor(prisma: PengajarRepository);
@@ -17,7 +17,7 @@ export declare class PengajarService {
         isActive: boolean;
         otp: string | null;
         otpExpiresAt: Date | null;
-        role: import("../../dist/generated/index.js").$Enums.Role;
+        role: import("../../dist/generated").$Enums.Role;
         deletedAt: Date | null;
     }>;
 }

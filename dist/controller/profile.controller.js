@@ -1,4 +1,4 @@
-import { errorResponse, successResponse } from "../utils/response.js";
+import { errorResponse, successResponse } from "../utils/response";
 export class ProfileController {
     profileService;
     constructor(profileService) {

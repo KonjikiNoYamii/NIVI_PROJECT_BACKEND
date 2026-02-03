@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { MataPelajaranService } from "../service/mataPelajaran.service.js";
+import { MataPelajaranService } from "../service/mataPelajaran.service";
 export declare class MataPelajaranController {
     private service;
     constructor(service: MataPelajaranService);

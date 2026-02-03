@@ -1,4 +1,4 @@
-import { PrismaClient, User } from "../../dist/generated/index.js";
+import { PrismaClient, User } from "../../dist/generated";
 export declare class PengajarRepository {
     private prisma;
     constructor(prisma: PrismaClient);

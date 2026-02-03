@@ -1,4 +1,4 @@
-import { PrismaClient, User } from "../../dist/generated/index.js";
+import { PrismaClient, User } from "../../dist/generated";
 export declare class AuthRepository {
     private prisma;
     constructor(prisma: PrismaClient);
@@ -14,7 +14,7 @@ export declare class AuthRepository {
         isActive: boolean;
         otp: string | null;
         otpExpiresAt: Date | null;
-        role: import("../../dist/generated/index.js").$Enums.Role;
+        role: import("../../dist/generated").$Enums.Role;
         deletedAt: Date | null;
     }>;
     setOtp: (email: string, otp: string, otpExpiresAt: Date) => Promise<{
@@ -28,7 +28,7 @@ export declare class AuthRepository {
         isActive: boolean;
         otp: string | null;
         otpExpiresAt: Date | null;
-        role: import("../../dist/generated/index.js").$Enums.Role;
+        role: import("../../dist/generated").$Enums.Role;
         deletedAt: Date | null;
     }>;
 }

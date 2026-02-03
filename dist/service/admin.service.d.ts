@@ -1,4 +1,4 @@
-import { AdminRepository } from "../repository/admin.repository.js";
+import { AdminRepository } from "../repository/admin.repository";
 export declare class AdminService {
     private repo;
     constructor(repo: AdminRepository);
@@ -17,7 +17,7 @@ export declare class AdminService {
         isActive: boolean;
         otp: string | null;
         otpExpiresAt: Date | null;
-        role: import("../../dist/generated/index.js").$Enums.Role;
+        role: import("../../dist/generated").$Enums.Role;
         deletedAt: Date | null;
     }>;
     createSantriByAdmin: (data: {
@@ -35,7 +35,7 @@ export declare class AdminService {
         isActive: boolean;
         otp: string | null;
         otpExpiresAt: Date | null;
-        role: import("../../dist/generated/index.js").$Enums.Role;
+        role: import("../../dist/generated").$Enums.Role;
         deletedAt: Date | null;
     }>;
     createPengajarByAdmin: (data: {
@@ -52,7 +52,7 @@ export declare class AdminService {
         isActive: boolean;
         otp: string | null;
         otpExpiresAt: Date | null;
-        role: import("../../dist/generated/index.js").$Enums.Role;
+        role: import("../../dist/generated").$Enums.Role;
         deletedAt: Date | null;
     }>;
     activateWithPassword: (email: string, password: string) => Promise<{
@@ -66,7 +66,7 @@ export declare class AdminService {
         isActive: boolean;
         otp: string | null;
         otpExpiresAt: Date | null;
-        role: import("../../dist/generated/index.js").$Enums.Role;
+        role: import("../../dist/generated").$Enums.Role;
         deletedAt: Date | null;
     }>;
     assign(kelasId: number, pengajarId: number): Promise<{
@@ -103,7 +103,7 @@ export declare class AdminService {
         isActive: boolean;
         otp: string | null;
         otpExpiresAt: Date | null;
-        role: import("../../dist/generated/index.js").$Enums.Role;
+        role: import("../../dist/generated").$Enums.Role;
         deletedAt: Date | null;
     }[]>;
     getAdmin: (id: number) => Promise<{
@@ -117,7 +117,7 @@ export declare class AdminService {
         isActive: boolean;
         otp: string | null;
         otpExpiresAt: Date | null;
-        role: import("../../dist/generated/index.js").$Enums.Role;
+        role: import("../../dist/generated").$Enums.Role;
         deletedAt: Date | null;
     } | null>;
     updateAdmin: (id: number, data: Partial<{
@@ -135,7 +135,7 @@ export declare class AdminService {
         isActive: boolean;
         otp: string | null;
         otpExpiresAt: Date | null;
-        role: import("../../dist/generated/index.js").$Enums.Role;
+        role: import("../../dist/generated").$Enums.Role;
         deletedAt: Date | null;
     }>;
     deleteAdmin: (id: number) => Promise<{
@@ -149,7 +149,7 @@ export declare class AdminService {
         isActive: boolean;
         otp: string | null;
         otpExpiresAt: Date | null;
-        role: import("../../dist/generated/index.js").$Enums.Role;
+        role: import("../../dist/generated").$Enums.Role;
         deletedAt: Date | null;
     }>;
     createAdmin: (data: {
@@ -167,7 +167,7 @@ export declare class AdminService {
         isActive: boolean;
         otp: string | null;
         otpExpiresAt: Date | null;
-        role: import("../../dist/generated/index.js").$Enums.Role;
+        role: import("../../dist/generated").$Enums.Role;
         deletedAt: Date | null;
     }>;
 }
