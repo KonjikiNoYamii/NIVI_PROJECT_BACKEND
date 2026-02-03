@@ -257,12 +257,16 @@ export class AbsensiService {
       const waktu = this.parseJam(jadwal.jamSelesai);
       if (!waktu) continue;
 
-      const sesiSelesai = new Date();
-      sesiSelesai.setFullYear(
-        tanggal.getFullYear(),
-        tanggal.getMonth(),
-        tanggal.getDate(),
-      );
+      const sesiSelesai = new Date(tanggal); // tanggal hari ini
+      sesiSelesai.setHours(waktu.jam, waktu.menit + 1, 0, 0); // +1 menit setelah sesi selesai
+
+      await this.absensiRepo.create({
+        userId,
+        kelasId,
+        tanggal: sesiSelesai, // PASTIKAN ini ada jam & menit
+        jadwalId: jadwal.id,
+        status: StatusAbsensi.alpha,
+      });
       sesiSelesai.setHours(waktu.jam, waktu.menit, 0, 0);
       console.log({
         now: now.toISOString(),
@@ -285,7 +289,7 @@ export class AbsensiService {
       await this.absensiRepo.create({
         userId,
         kelasId,
-        tanggal,
+        tanggal: sesiSelesai,
         jadwalId: jadwal.id,
         status: StatusAbsensi.alpha,
       });
